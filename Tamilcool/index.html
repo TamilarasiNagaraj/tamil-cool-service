@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tamil Cool Service</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="nav">
+    <div class="logo">
+        <img src="Images/IMG-20260326-WA0003.jpg" alt="Logo">
+    </div>
+    <h1>Tamil Cool Service</h1>
+
+    <ul class="menu" id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-btn" id="menuBtn">☰</div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-slide active" style="background-image: url('Images/ac.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('Images/washing.webp');"></div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Fast & Reliable AC Service</h1>
+        <p>Book Trusted Technicians Near You Today</p>
+
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-row">
+        <img src="Images/ac.jpg">
+        <div>
+            <h3>AC Installation & Repair</h3>
+            <p>
+                Professional AC service for all brands with quick response and affordable pricing.
+            </p>
+
+            <ul>
+                <li>✔ Gas Filling</li>
+                <li>✔ Cooling Fix</li>
+                <li>✔ Installation</li>
+                <li>✔ Maintenance</li>
+            </ul>
+
+            <a href="#" class="book-btn open-popup" data-service="AC Service">Book Now</a>
+        </div>
+    </div>
+
+    <div class="service-row reverse">
+        <img src="Images/washing.webp">
+        <div>
+            <h3>Washing Machine Repair</h3>
+            <p>
+                Fast repair for all washing machine types with expert technicians.
+            </p>
+
+            <ul>
+                <li>✔ Drum Repair</li>
+                <li>✔ Leakage Fix</li>
+                <li>✔ Motor Repair</li>
+                <li>✔ Same Day Service</li>
+            </ul>
+
+            <a href="#" class="book-btn open-popup" data-service="Washing Machine">Book Now</a>
+        </div>
+    </div>
+    <div class="service-row">
+    <img src="Images/home.jpg">
+    <div>
+        <h3>All Home Appliances Service & Installation</h3>
+        <p>
+            We provide complete service and installation for all home appliances
+            with expert technicians and quick support.
+        </p>
+
+        <ul>
+            <li>✔ AC </li>
+            <li>✔ Washing Machine</li>
+            <li>✔ Refrigerator Repair</li>
+            <li>✔ Aqua</li>
+            <li>✔ Mixer & Small Appliance Repair</li>
+        </ul>
+
+        <a href="#" class="book-btn open-popup" data-service="Home Appliances">Book Now</a>
+    </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+    <div class="about-container">
+        <img src="Images/trust.jpg">
+
+        <div>
+            <h2>Trusted Service Experts</h2>
+            <p>
+                We provide reliable AC and washing machine services across Tamil Nadu.
+            </p>
+
+            <p>
+                ✔ Skilled Technicians <br>
+                ✔ Fast & Reliable Service <br>
+                ✔ Customer Satisfaction First
+            </p>
+
+            <a href="https://wa.me/918220345323?text=I%20want%20service"
+              ></a>
+        </div>
+    </div>
+
+</section>
+
+<!-- WHY -->
+<section class="why">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-grid">
+        <div>⚡ Same Day Service</div>
+        <div>👨‍🔧 Skilled Technicians</div>
+        <div>💰 Affordable Price</div>
+        <div>📍 Tamil Nadu Coverage</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+    <h2>Contact Us</h2>
+
+    <p>📍 Coimbatore, Tamil Nadu</p>
+    <p>📞 +91 8220345323</p>
+
+    <div class="contact-buttons">
+        <a href="tel:+918220345323" class="call-btn">Call Now</a>
+        <a href="https://wa.me/918220345323" class="whatsapp-btn">WhatsApp</a>
+    </div>
+</section>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/918220345323" class="float-wa">💬</a>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Tamil Cool Service</p>
+</footer>
+<!-- BOOKING POPUP -->
+<!-- POPUP -->
+<div class="popup" id="popup">
+<div class="popup-content">
+
+<span class="close-btn" id="closePopup">&times;</span>
+
+<h2>Book Service</h2>
+
+<form id="bookingForm">
+
+<input type="text" id="name" placeholder="Customer Name" required>
+<input type="tel" id="mobile" placeholder="Mobile Number" required>
+<input type="text" id="address" placeholder="Enter Address" required>
+
+<textarea id="message" placeholder="Enquiry"></textarea>
+
+<select id="serviceType" required >
+    <option value="" >Select Service</option>
+<option>AC Service</option>
+<option>Washing Machine</option>
+<option>Home Appliances</option>
+</select>
+
+<iframe id="mapFrame"
+src="https://www.google.com/maps?q=Tamil%20Nadu&output=embed"></iframe>
+
+<button type="submit">Submit</button>
+
+</form>
+
+<p id="successMsg"></p>
+
+</div>
+</div>
+
+<script>
+// Mobile menu
+document.getElementById("menuBtn").onclick = function() {
+    document.getElementById("menu").classList.toggle("show");
+};
+
+// Hero slider
+let heroSlides = document.querySelectorAll(".hero-slide");
+let i = 0;
+
+setInterval(() => {
+    heroSlides[i].classList.remove("active");
+    i = (i + 1) % heroSlides.length;
+    heroSlides[i].classList.add("active");
+}, 3000);
+
+
+// OPEN POPUP
+// POPUP
+document.querySelectorAll(".open-popup").forEach(btn=>{
+btn.onclick=(e)=>{
+e.preventDefault();
+popup.style.display="flex";
+
+// ✅ auto select service
+document.getElementById("serviceType").value = btn.dataset.service;
+
+// clear message
+document.getElementById("successMsg").innerText = "";
+};
+});
+
+document.getElementById("closePopup").onclick=()=>{
+popup.style.display="none";
+};
+
+// MAP UPDATE
+document.getElementById("address").addEventListener("input",function(){
+document.getElementById("mapFrame").src=
+"https://www.google.com/maps?q="+encodeURIComponent(this.value)+"&output=embed";
+});
+
+// GOOGLE SHEET URL
+const scriptURL="https://script.google.com/macros/s/AKfycbw1_N03iYhdGdOsjI8_NQmkcQEzn0p_QxvWqeq1vrJW4L5LuQyDxLY42TroHzjxtdTCWQ/exec";
+
+// SUBMIT
+document.getElementById("bookingForm").onsubmit = async function(e){
+e.preventDefault();
+
+let name = document.getElementById("name").value.trim();
+let mobile = document.getElementById("mobile").value.trim();
+let address = document.getElementById("address").value.trim();
+let service = document.getElementById("serviceType").value;
+let message = document.getElementById("message").value.trim();
+
+// ✅ VALIDATION
+if(name === "" || mobile === "" || address === ""){
+    document.getElementById("successMsg").innerText =
+        "❌ Please fill all required fields!";
+    return;
+}
+
+// ✅ MOBILE VALIDATION
+if(mobile.length < 10){
+    document.getElementById("successMsg").innerText =
+        "❌ Enter valid mobile number!";
+    return;
+}
+if(service === ""){
+    document.getElementById("successMsg").innerText =
+        "❌ Please select service!";
+    return;
+}
+let service1 = document.getElementById("serviceType").value;
+let mapLink = "https://www.google.com/maps?q=" + encodeURIComponent(address);
+
+let data = {
+    name: name,
+    mobile: mobile,
+    address: address,
+    service: service,
+    message: message,
+    map: mapLink
+};
+
+try{
+    await fetch(scriptURL,{
+        method:"POST",
+        body: JSON.stringify(data)
+    });
+
+    document.getElementById("successMsg").innerText =
+        "✅ Submitted Successfully!";
+
+    setTimeout(()=>{
+        document.getElementById("popup").style.display = "none";
+        document.getElementById("bookingForm").reset();
+        document.getElementById("mapFrame").src =
+        "https://www.google.com/maps?q=Tamil%20Nadu&output=embed";
+        document.getElementById("successMsg").innerText = "";
+    }, 2000);
+
+}catch{
+    document.getElementById("successMsg").innerText = "❌ Error!";
+}
+};
+</script>
+
+</body>
+</html>
